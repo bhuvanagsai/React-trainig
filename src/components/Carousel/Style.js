@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CarouselContainer = styled.div`
     width:90%;
     display:flex;
-    margin-top:30px;
+    padding: 30px 0px;
 `
 
 export const ContentContainer = styled.div`
@@ -21,7 +21,7 @@ export const ContentContainer = styled.div`
         font-weight: 500;
     }
     >p{
-        width:452px;
+        width:87%;
         color: #1e1737;
         font-size: 40px;
         font-weight: 600;

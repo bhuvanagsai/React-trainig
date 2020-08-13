@@ -30,7 +30,7 @@ a{
 .carousel .control-dots{
   left: 2%;
   text-align: unset !important;
-  bottom: 5px !important;
+  bottom: 0px !important;
 
 }
 .carousel .control-dots  .dot:hover{
