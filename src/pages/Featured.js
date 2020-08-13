@@ -2,12 +2,17 @@ import React from 'react';
 
 
 import ButtonNavigation from '../components/ButtonNavigation/ButtonNavigation';
+import DemoCarousel from '../components/Carousel/carousel';
 
 
 
 const FeaturedPage = () =>{
     return(
-        <ButtonNavigation/>
+        <div>
+            <DemoCarousel/>
+            <ButtonNavigation/>
+        </div>
+        
     );
 }
 
