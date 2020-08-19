@@ -4,56 +4,37 @@ import QuickLearnCard from './QuickLearnCard/quickLearnCard';
 
 import SubCards from './QuickLearnSubCards/subCards';
 
+import axios from '../../Axios/Axios';
+
+import Loader from '../../CommonComponents/Loader/Loader';
+
+
+
 class QuickConcepts extends Component{
     state = {
-        QuickLearnData : [
-            {
-                id:0,
-                LearnType : "Quick Learn",
-                title : "Machine learning vs Deep learning",
-                timing: 5,
-            },
-            {
-                id:1,
-                LearnType : "Quick Learn",
-                title : "Machine learning vs Deep learning",
-                timing: 5,
-            }
-        ],
-        SubCardsData :[
-            {
-                image  : require("../../assets/Images/bitmap.png"),
-                title : "How business needs to change to be AI ready?",
-                timing : 6,
-                type : "Business Insider"
-            },
-            {
-                image  : require("../../assets/Images/bitmap-1.png"),
-                title : "Is neuralink actually gonna save world?",
-                timing : 6,
-                type : "Medium"
-            },
-            {
-                image  : require("../../assets/Images/bitmap-2.png"),
-                title : "A primer on Artificial Intelligence (AI)",
-                timing : 6,
-                type : "Hackernoon"
-            },
-            {
-                image  : require("../../assets/Images/bitmap-3.png"),
-                title : "Machine learning vs Deep learning",
-                timing : 6,
-                type : "Medium"
-            }
-        ]
+        quickLearnData : [], 
+        subCardsData :[],
+        loader : false
+    }
+    componentDidMount() {
+        axios.get("/0.json").then((response) =>{
+            this.setState({quickLearnData :Object.values(response.data.quickLearnData)});
+            this.setState({subCardsData :Object.values(response.data.subCardsData)})
+            setTimeout ( () => this.setState({loader: true})
+          ,3000);
+          })
     }
     render(){
+        
         return(
             <div>
-                <QuickLearnCard data = {this.state.QuickLearnData}></QuickLearnCard>
-                <SubCards data = {this.state.SubCardsData}></SubCards>
+                {this.state.loader === false ? <Loader/> :
+                    <div>
+                        <QuickLearnCard data = {this.state.quickLearnData}></QuickLearnCard>
+                        <SubCards data = {this.state.subCardsData}></SubCards>
+                    </div>
+                }   
             </div>
-           
         );
 
     }

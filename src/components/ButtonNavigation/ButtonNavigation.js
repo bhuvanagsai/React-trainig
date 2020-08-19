@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import {NavgationContainer,NavButton} from './Style';
+import {NavgationContainer,NavButton,Line} from './Style';
 
 import QuickConcepts from '../QuickConcepts/quickConcepts';
 
 class ButtonNavigation extends Component{
     state = {
-        ButtonNavigationItems :[
+        buttonNavigationItems :[
             {
                 buttonName :"Quick Concepts",
                 id :0
@@ -27,8 +27,9 @@ class ButtonNavigation extends Component{
         this.setState({ activeState: id });
         this.setState({buttonType : btnName})
     }
-    renderSwitch(param) {
-        switch(param) {
+   
+    renderSwitch(buttonName) {
+        switch(buttonName) {
           case 'Quick Concepts':
             return <QuickConcepts/>;
           case 'Articles' :
@@ -42,15 +43,15 @@ class ButtonNavigation extends Component{
     render(){
         return (
             <div>
+                <Line></Line>
                 <NavgationContainer>
-                    {this.state.ButtonNavigationItems.map((p , index) =>(
+                    {this.state.buttonNavigationItems.map((p , index) =>(
                         <NavButton key = {p.id} active = {p.id === this.state.activeState}
                         onClick={() => {this.switchHandler(index,p.buttonName)}}>{p.buttonName}</NavButton>
                     ))}
                 </NavgationContainer>
                 {this.renderSwitch(this.state.buttonType)}
             </div>
-
         );
 
     }

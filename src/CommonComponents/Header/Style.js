@@ -6,14 +6,9 @@ export const HeaderNavigation = styled.ul`
 
 export  const NavLink = styled.li`
     color:#11142f;
-    padding-left:30px;
     opacity:${(props) => (props.activeheader ? 1 : 0.4)};
     font-weight: 600;
-    
-    /* >a{
-        color:"#11142f";
-        
-    } */
+    margin-right:10px;
 `
 export const ProfileIcon = styled.div`
     width:40px;

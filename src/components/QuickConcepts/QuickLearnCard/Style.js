@@ -4,14 +4,26 @@ export const QuickLearnCardsContainer = styled.div`
     margin-top:30px;
     display:flex;
     flex-wrap:wrap;
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+        margin-top:0;
+    }
 `
 export const Cards = styled.div` 
     background-color:aliceblue;
-    width: 450px;
-    margin-left: 20px;
+    width: 44%;
+    margin-right: 20px;
     height: 250px;
     border-radius:16px;
     position:relative;
+    :nth-last-child(){
+        margin-right: 0px;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+        margin-top:20px;
+        margin-right:0px;
+        width:100%;
+
+    }
 `
 export const ImageContainer = styled.div`
     height:inherit;

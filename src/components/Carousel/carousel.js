@@ -1,53 +1,43 @@
 
 
-import React ,  {Component} from 'react';
+import React from 'react';
+
 import {Carousel} from 'react-responsive-carousel';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import {CarouselContainer,ImageContainer,ContentContainer,ButtonNavigation} from './Style';
+import {CarouselContainer,ImageContainer,ContentContainer,ButtonNavigation,ArrowImage,TeamAndDate} from './Style';
 
-class  DemoCarousel extends Component{
-    state = {
-        CarouselData : [
-            {
-                pageName  : "Featured1",
-                text :"Role of AI in humanizing digital banking",
-                image : require('../../assets/Images/group-11.png')
-            },
-            {
-                pageName  : "Featured2",
-                text :"Role of AI in humanizing digital banking",
-                image : require('../../assets/Images/group-11.png')
-            },
-            {
-                pageName  : "Featured3",
-                text :"Role of AI in humanizing digital banking",
-                image : require('../../assets/Images/group-11.png')
-            }
-        ]
-    }
-    render() {
+import Loader from '../../CommonComponents/Loader/Loader';
+
+const  DemoCarousel = (props) =>{
         return (
-            <Carousel showArrows={false} showThumbs = {false} showStatus = {false}>
-                {this.state.CarouselData.map((p,index)=>(
-                    <CarouselContainer>
+            <div>
+                {props.loading === false ? <Loader/> :
+                <Carousel  showArrows={false} showThumbs = {false} showStatus = {false} infiniteLoop= {false} showIndicators = {props.indicator} >
+                {props.bannerData.map((p,index)=>(
+                    <CarouselContainer key = {p.id}>
                         <ContentContainer>
                             <span>{p.pageName}</span>
                             <p>{p.text}</p>
-                            <ButtonNavigation>
-                                <a href = "/">View Case study</a>
-                                <img src = {require('../../assets/Images/group-4.png')} alt = "banner slider images"/>
-                            </ButtonNavigation>
+                            {props.button === true ?
+                                <ButtonNavigation href = "/ViewCaseStudy">
+                                    View Case study
+                                    <ArrowImage src ={require('../../assets/Images/group-4.png')}  alt = "banner slider images"/>
+                                </ButtonNavigation> :
+                                <TeamAndDate>Bigdata Team, Aug 2020</TeamAndDate>
+                            }
                         </ContentContainer>
                         <ImageContainer>
-                            <img src={p.image} alt  = "Slider" />
+                            <img src={require(`../../assets/Images/${p.image}.png`)} alt  = "Slider" />
                         </ImageContainer>
                     </CarouselContainer>
                 ))}
             </Carousel>
+                }
+            </div>
+            
         );
-    }
 }
 
 export default DemoCarousel;
