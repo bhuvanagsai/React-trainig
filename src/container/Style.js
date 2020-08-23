@@ -17,3 +17,6 @@ export const MainContainer = styled.div`
 
     }
 `;
+export const MainContainerWrapper = styled.div`
+  width:90%;
+`

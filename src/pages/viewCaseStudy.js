@@ -6,10 +6,12 @@ import axios from "../Axios/Axios";
 
 import CaseStudyTabs from "../components/CaseStudyTabs/caseStudyTabs";
 
+import {MainContainerWrapper} from '../container/Style';
+
 class ViewCaseStudyPage extends Component {
   state = {
     caseStudyBanner: [],
-    Bannerloader: false,
+    Bannerloader: true,
     caseStudyTabs: [
       {
         buttonName: "About",
@@ -31,23 +33,27 @@ class ViewCaseStudyPage extends Component {
     buttonState: 0,
     tabData : [],
     tabLoader : true,
-    cardData : []
+    cardData : [],
+    viewDetailedCaseStudy : false
   };
-  async componentDidMount() {
+  componentDidMount() {
     axios.get("/0.json").then((response) => {
       this.setState({caseStudyBanner: Object.values(response.data.caseStudyBanner)});
       this.setState({tabData : response.data.caseStudyTabs});
       this.setState({cardData : response.data.cardData});
-      setTimeout(() => this.setState({ Bannerloader: true }), 3000);
-      setTimeout(() => this.setState({tabLoader: false}),5000) ;
+      this.setState({ Bannerloader: false });
+      this.setState({tabLoader: false}) ;
     });
   }
   buttonHandler = (id) => {
     this.setState({ buttonState: id });
   };
+  viewDetailedCaseButton = () =>{
+    this.setState({ viewDetailedCaseStudy: true });
+  };
   render() {    
     return (
-      <div>
+      <MainContainerWrapper>
         <DemoCarousel
           bannerData={this.state.caseStudyBanner}
           loading={this.state.Bannerloader}
@@ -61,8 +67,10 @@ class ViewCaseStudyPage extends Component {
           youMayLike = {this.state.cardData}
           tabLoading = {this.state.tabLoader}
           tabData = {this.state.tabData}
+          DetailedCaseStudy = {this.state.viewDetailedCaseStudy}
+          caseStudyHandler = {this.viewDetailedCaseButton}
         />
-      </div>
+      </MainContainerWrapper>
     );
   }
 }

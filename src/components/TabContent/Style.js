@@ -5,21 +5,46 @@ export const About1 = styled.div`
 `
 
 export const Heading = styled.h4`
-  font-size: 20px;
-  font-weight: bold;
-  color: #11142f;
+  font-size: ${props => props.theme.fontSize.h4};
+  font-weight:  ${props => props.theme.fontWeight.bold};
+  color: ${props => props.theme.fontColor.primaryColor};
+  margin-top: 0;
 
 `
 
 export const Description = styled.div`
-  font-size: 14px;
+  font-size: ${props => props.theme.fontSize.secondary};
   line-height: 1.57;
-  color: #3c4072;
+  color: ${props => props.theme.fontColor.dusk};
   >div{
-        font-weight : bold;
+        font-weight :  ${props => props.theme.fontWeight.bold};
   }
 `
 
 export const ImageContainer = styled.div`
   width:96%;
+`;
+export const ContentWrapper = styled.div`
+height: 258px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  width: calc(77% - 15px);
+  margin-right: 15px;
+  ::-webkit-scrollbar {
+    width: 0px;
+}
+`;
+
+
+export const ViewDetailedCaseStudy = styled.button`
+    color: #3448c5;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background: none;
+    margin: 20px 0px;
+    :focus{
+      outline:none;
+    }
 `

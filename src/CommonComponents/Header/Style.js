@@ -5,9 +5,10 @@ export const HeaderNavigation = styled.ul`
 `;
 
 export  const NavLink = styled.li`
-    color:#11142f;
+    color:${props => props.theme.fontColor.primaryColor};
     opacity:${(props) => (props.activeheader ? 1 : 0.4)};
-    font-weight: 600;
+    font-weight: ${props => props.theme.fontWeight.w600};
+    font-size: ${props => props.theme.fontSize.secondary};
     margin-right:10px;
 `
 export const ProfileIcon = styled.div`

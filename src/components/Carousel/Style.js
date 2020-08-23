@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const CarouselContainer = styled.div`
-    width:90%;
     display:flex;
     @media only screen and (min-width: 320px) and (max-width: 1024px) {
         padding-bottom:30px;
@@ -16,16 +15,16 @@ export const ContentContainer = styled.div`
     align-items: flex-start;
     justify-content:center;
     >span{
-        color:#000000;
+        color:${props => props.theme.fontColor.black};
         opacity:0.5;
-        font-size: 14px;
-        font-weight: 500;
+        font-weight: ${props => props.theme.fontWeight.w500};
+        font-size: ${props => props.theme.fontSize.secondary};
     }
     >p{
         width:88%;
         color: #1e1737;
-        font-size: 40px;
-        font-weight: 600;
+        font-size: ${props => props.theme.fontSize.heading};
+        font-weight:  ${props => props.theme.fontWeight.w600};
         text-align:initial;
         margin:20px 0px;
     }
@@ -36,9 +35,9 @@ export const ButtonNavigation = styled.a`
     background:none;
     display: flex;
     align-items: center;
-    color: #3448c4;
-    font-size: 14px;
-    font-weight: bold;
+    color:  ${props => props.theme.fontColor.secondaryColor};
+    font-size: ${props => props.theme.fontSize.secondary};
+    font-weight:  ${props => props.theme.fontWeight.bold};
     cursor: pointer;
     &:focus{
         outline:none;
@@ -60,8 +59,8 @@ export const TeamAndDate = styled.div`
     color: #3f4274;
     font-style: italic;
     line-height: 1.14;
-    font-size: 14px;
-    font-weight: 300;
+    font-size: ${props => props.theme.fontSize.secondary};
+    font-weight:  ${props => props.theme.fontWeight.w300};
 
 
 `

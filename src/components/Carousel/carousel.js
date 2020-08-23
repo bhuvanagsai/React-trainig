@@ -13,7 +13,7 @@ import Loader from '../../CommonComponents/Loader/Loader';
 const  DemoCarousel = (props) =>{
         return (
             <div>
-                {props.loading === false ? <Loader/> :
+                {props.loading === true ? <Loader/> :
                 <Carousel  showArrows={false} showThumbs = {false} showStatus = {false} infiniteLoop= {false} showIndicators = {props.indicator} >
                 {props.bannerData.map((p,index)=>(
                     <CarouselContainer key = {p.id}>

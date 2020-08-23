@@ -16,14 +16,14 @@ export const Wrapper = styled.div`
     }
 `
 export const Logo = styled.div`
-    font-size:30px;
+    font-size:${props => props.theme.fontSize.h2};
     color:blue;
     margin-right: 15px;
 `;
 export const LogoWrapper = styled.div`
     display:flex;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: ${props => props.theme.fontSize.h5};
+    font-weight:  ${props => props.theme.fontWeight.w600};
     color: darkblue;
     padding-top: 10px;
     height: 10%;
