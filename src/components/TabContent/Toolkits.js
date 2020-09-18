@@ -1,12 +1,11 @@
-import React from 'react';
+import React from "react";
 
-const ToolKits = () =>{
-    return(
-        <div id = "Toolkits">
-            <h4>Toolkits</h4>
-        </div>
-
-    );
-}
+const ToolKits = () => {
+  return (
+    <div id="Toolkits">
+      <h4>Toolkits</h4>
+    </div>
+  );
+};
 
 export default ToolKits;

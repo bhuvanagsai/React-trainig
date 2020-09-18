@@ -1,40 +1,64 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
-import {HeaderNavigation,HeaderContainer,ProfileIcon,NavLink} from './Style';
+import fire from "../../Firebase/firebase";
 
+import {
+  HeaderNavigation,
+  HeaderContainer,
+  ProfileIcon,
+  StyledLink,
+  ProfileContainer,
+  LogOutBtn,
+} from "./Style";
 
-class Header extends Component{
-    state = {
-        navItems : [
-            {
-                link:"My Dashboard",
-                id:0
-            },
-            {
-                link: "Explore AI",
-                id :1
-            }
-        ],
-        activeheader: 0
+class Header extends Component {
+  state = {
+    navItems: [
+      {
+        link: "My Dashboard",
+        id: 0,
+        map: "/dashBoard",
+      },
+      {
+        link: "View CaseStudy",
+        id: 1,
+        map: "/viewCaseStudy",
+      },
+    ],
+  };
+  logOutHandler = () => {
+    let alert = window.confirm("Are you sure you want to Logout?");
+    if (alert) {
+      fire.auth().signOut();
     }
-    switchNavHandler = (id) =>{
-        this.setState({ activeheader: id });
-    }
-    render(){
-        return(
-            <HeaderContainer>
-                <HeaderNavigation>
-                {this.state.navItems.map((i,index) => (
-                    <NavLink key = {i.id} activeheader = {i.id === this.state.activeheader}
-                    onClick={() => {this.switchNavHandler(index)}}
-                    >{i.link}</NavLink>
-                ))}
-                </HeaderNavigation>
-                <ProfileIcon>
-                    <img src = {require('../../assets/Images/oval.png')} alt  = "Profile icon"/>
-                </ProfileIcon>
-            </HeaderContainer>
-        )};
-
+  };
+  render() {
+    return (
+      <HeaderContainer>
+        <HeaderNavigation>
+          {this.state.navItems.map((i, index) => (
+            <StyledLink key={i.id}>
+              <a href={i.map}>{i.link}</a>
+            </StyledLink>
+          ))}
+        </HeaderNavigation>
+        <ProfileContainer>
+          <ProfileIcon>
+            <img
+              src={require("../../assets/Images/oval.png")}
+              alt="Profile icon"
+            />
+          </ProfileIcon>
+          <LogOutBtn
+            onClick={() => {
+              this.logOutHandler();
+            }}
+          >
+            LogOut
+          </LogOutBtn>
+        </ProfileContainer>
+      </HeaderContainer>
+    );
+  }
 }
 export default Header;

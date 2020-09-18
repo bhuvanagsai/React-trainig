@@ -1,32 +1,69 @@
-import React, { Component } from 'react';
+import React from "react";
 
-import 'font-awesome/css/font-awesome.min.css';
+import "font-awesome/css/font-awesome.min.css";
 
-import { ThemeProvider } from 'styled-components';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
-import theme from '../Theme/theme';
+import { ThemeProvider } from "styled-components";
 
-import {AppWrapper,AppContainer,MainContainer} from './Style'
+import theme from "../Theme/theme";
 
+import { AppWrapper } from "./Style";
 
-import Routing from '../Routers/Routing';
+import Login from "../pages/Login/login";
 
-import SideDrawer from '../CommonComponents/SideDrawer/SideDrawer';
+import SignUp from "../pages/SignUp/signUp";
 
-class App extends Component {
-  render(){
+import Routing from "../Routers/Routing";
+
+import pageNotFound from "../pages/404-Page/pageNotFound";
+
+import fire from "../Firebase/firebase";
+
+class App extends React.Component {
+  constructor(props) {
+    super();
+    this.state = {
+      user: {},
+    };
+  }
+  componentDidMount() {
+    this.authListener();
+  }
+  authListener() {
+    fire.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ user });
+      } else {
+        this.setState({ user: null });
+      }
+    });
+  }
+  render() {
     return (
       <AppWrapper>
-        <ThemeProvider theme = {theme}>
-          <AppContainer>
-          <SideDrawer/>
-              <MainContainer>
-                <Routing/>
-              </MainContainer>
-          </AppContainer>
+        <ThemeProvider theme={theme}>
+          <Router>
+            <Switch>
+              <Route path="/" exact component={Login} />,
+              <Route path="/SignUp" exact component={SignUp} />
+              <Route
+                path={["/DashBoard", "/Explore AI", "/ViewCaseStudy"]}
+                exact
+                render={() =>
+                  this.state.user ? <Routing /> : <Redirect to="/" />
+                }
+              />
+              <Route path="*" exact component={pageNotFound} />
+            </Switch>
+          </Router>
         </ThemeProvider>
       </AppWrapper>
-      
     );
   }
 }
