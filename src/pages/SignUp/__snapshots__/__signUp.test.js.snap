@@ -1,0 +1,1094 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignUp/> should render SignUp component 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SignUp />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <ForwardRef(styled.div)>
+        <h2>
+          Sign Up
+        </h2>
+        <ForwardRef(styled.div)>
+          <InputData
+            changed={[Function]}
+            elementConfig={
+              Object {
+                "placeholder": "FullName",
+                "type": "text",
+              }
+            }
+            elementType="input"
+            invalid={true}
+            label="FullName"
+            touched={false}
+            value=""
+          />
+          <InputData
+            changed={[Function]}
+            elementConfig={
+              Object {
+                "placeholder": "Username",
+                "type": "text",
+              }
+            }
+            elementType="input"
+            invalid={true}
+            label="UserName"
+            touched={false}
+            value=""
+          />
+          <InputData
+            changed={[Function]}
+            elementConfig={
+              Object {
+                "placeholder": "Password",
+                "type": "text",
+              }
+            }
+            elementType="input"
+            invalid={true}
+            label="Password"
+            touched={false}
+            value=""
+          />
+          <InputData
+            changed={[Function]}
+            elementConfig={
+              Object {
+                "placeholder": "Confirm Password",
+                "type": "text",
+              }
+            }
+            elementType="input"
+            invalid={true}
+            label="Confirm Password"
+            touched={false}
+            value=""
+          />
+          
+          <ForwardRef(styled.button)
+            onClick={[Function]}
+          >
+            Sign Up
+          </ForwardRef(styled.button)>
+          <ForwardRef(styled.button)
+            onClick={[Function]}
+          >
+            Log in
+          </ForwardRef(styled.button)>
+        </ForwardRef(styled.div)>
+      </ForwardRef(styled.div)>,
+      "style": Object {
+        "textAlign": "center",
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Sign Up
+          </h2>,
+          <ForwardRef(styled.div)>
+            <InputData
+              changed={[Function]}
+              elementConfig={
+                Object {
+                  "placeholder": "FullName",
+                  "type": "text",
+                }
+              }
+              elementType="input"
+              invalid={true}
+              label="FullName"
+              touched={false}
+              value=""
+            />
+            <InputData
+              changed={[Function]}
+              elementConfig={
+                Object {
+                  "placeholder": "Username",
+                  "type": "text",
+                }
+              }
+              elementType="input"
+              invalid={true}
+              label="UserName"
+              touched={false}
+              value=""
+            />
+            <InputData
+              changed={[Function]}
+              elementConfig={
+                Object {
+                  "placeholder": "Password",
+                  "type": "text",
+                }
+              }
+              elementType="input"
+              invalid={true}
+              label="Password"
+              touched={false}
+              value=""
+            />
+            <InputData
+              changed={[Function]}
+              elementConfig={
+                Object {
+                  "placeholder": "Confirm Password",
+                  "type": "text",
+                }
+              }
+              elementType="input"
+              invalid={true}
+              label="Confirm Password"
+              touched={false}
+              value=""
+            />
+            
+            <ForwardRef(styled.button)
+              onClick={[Function]}
+            >
+              Sign Up
+            </ForwardRef(styled.button)>
+            <ForwardRef(styled.button)
+              onClick={[Function]}
+            >
+              Log in
+            </ForwardRef(styled.button)>
+          </ForwardRef(styled.div)>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Sign Up",
+          },
+          "ref": null,
+          "rendered": "Sign Up",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              Array [
+                <InputData
+                  changed={[Function]}
+                  elementConfig={
+                    Object {
+                      "placeholder": "FullName",
+                      "type": "text",
+                    }
+                  }
+                  elementType="input"
+                  invalid={true}
+                  label="FullName"
+                  touched={false}
+                  value=""
+                />,
+                <InputData
+                  changed={[Function]}
+                  elementConfig={
+                    Object {
+                      "placeholder": "Username",
+                      "type": "text",
+                    }
+                  }
+                  elementType="input"
+                  invalid={true}
+                  label="UserName"
+                  touched={false}
+                  value=""
+                />,
+                <InputData
+                  changed={[Function]}
+                  elementConfig={
+                    Object {
+                      "placeholder": "Password",
+                      "type": "text",
+                    }
+                  }
+                  elementType="input"
+                  invalid={true}
+                  label="Password"
+                  touched={false}
+                  value=""
+                />,
+                <InputData
+                  changed={[Function]}
+                  elementConfig={
+                    Object {
+                      "placeholder": "Confirm Password",
+                      "type": "text",
+                    }
+                  }
+                  elementType="input"
+                  invalid={true}
+                  label="Confirm Password"
+                  touched={false}
+                  value=""
+                />,
+              ],
+              "",
+              <ForwardRef(styled.button)
+                onClick={[Function]}
+              >
+                Sign Up
+              </ForwardRef(styled.button)>,
+              <ForwardRef(styled.button)
+                onClick={[Function]}
+              >
+                Log in
+              </ForwardRef(styled.button)>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "FullName",
+              "nodeType": "function",
+              "props": Object {
+                "changed": [Function],
+                "elementConfig": Object {
+                  "placeholder": "FullName",
+                  "type": "text",
+                },
+                "elementType": "input",
+                "invalid": true,
+                "label": "FullName",
+                "touched": false,
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "UserName",
+              "nodeType": "function",
+              "props": Object {
+                "changed": [Function],
+                "elementConfig": Object {
+                  "placeholder": "Username",
+                  "type": "text",
+                },
+                "elementType": "input",
+                "invalid": true,
+                "label": "UserName",
+                "touched": false,
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "Password",
+              "nodeType": "function",
+              "props": Object {
+                "changed": [Function],
+                "elementConfig": Object {
+                  "placeholder": "Password",
+                  "type": "text",
+                },
+                "elementType": "input",
+                "invalid": true,
+                "label": "Password",
+                "touched": false,
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "ConfirmPassword",
+              "nodeType": "function",
+              "props": Object {
+                "changed": [Function],
+                "elementConfig": Object {
+                  "placeholder": "Confirm Password",
+                  "type": "text",
+                },
+                "elementType": "input",
+                "invalid": true,
+                "label": "Confirm Password",
+                "touched": false,
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Sign Up",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Sign Up",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": e {
+                  "baseHash": -1489299407,
+                  "baseStyle": undefined,
+                  "componentId": "sc-eCApGN",
+                  "isStatic": false,
+                  "rules": Array [
+                    "
+  width: 125px;
+  padding: 10px;
+  background-color: #53bbf2;
+  border: none;
+  border-radius: 8px;
+  margin-right: 8px;
+  cursor:pointer;
+  color: ",
+                    [Function],
+                    ";
+  &:focus {
+    border: none;
+    outline: none;
+  }
+",
+                  ],
+                  "staticRulesId": "",
+                },
+                "displayName": "styled.button",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "shouldForwardProp": undefined,
+                "styledComponentId": "sc-eCApGN",
+                "target": "button",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Log in",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Log in",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": e {
+                  "baseHash": -1489299407,
+                  "baseStyle": undefined,
+                  "componentId": "sc-eCApGN",
+                  "isStatic": false,
+                  "rules": Array [
+                    "
+  width: 125px;
+  padding: 10px;
+  background-color: #53bbf2;
+  border: none;
+  border-radius: 8px;
+  margin-right: 8px;
+  cursor:pointer;
+  color: ",
+                    [Function],
+                    ";
+  &:focus {
+    border: none;
+    outline: none;
+  }
+",
+                  ],
+                  "staticRulesId": "",
+                },
+                "displayName": "styled.button",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "shouldForwardProp": undefined,
+                "styledComponentId": "sc-eCApGN",
+                "target": "button",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": e {
+              "baseHash": 911557895,
+              "baseStyle": undefined,
+              "componentId": "sc-dlnjPT",
+              "isStatic": false,
+              "rules": Array [
+                "
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 20px #e1e1e1;
+  padding: 20px;
+",
+              ],
+              "staticRulesId": "",
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "shouldForwardProp": undefined,
+            "styledComponentId": "sc-dlnjPT",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": e {
+          "baseHash": -594304118,
+          "baseStyle": undefined,
+          "componentId": "sc-bdnylx",
+          "isStatic": false,
+          "rules": Array [
+            "
+  width: 100%;
+  margin: 0 auto;
+  min-height: 80vh;
+  text-align: center;
+  margin-top: 12%;
+",
+          ],
+          "staticRulesId": "",
+        },
+        "displayName": "styled.div",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "shouldForwardProp": undefined,
+        "styledComponentId": "sc-bdnylx",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
+    },
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": e {
+        "baseHash": -633946211,
+        "baseStyle": undefined,
+        "componentId": "sc-jSFkmK",
+        "isStatic": false,
+        "rules": Array [
+          "
+  text-align: center;
+  height: 50vh;
+  margin: 16% auto;
+",
+        ],
+        "staticRulesId": "",
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "shouldForwardProp": undefined,
+      "styledComponentId": "sc-jSFkmK",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <ForwardRef(styled.div)>
+          <h2>
+            Sign Up
+          </h2>
+          <ForwardRef(styled.div)>
+            <InputData
+              changed={[Function]}
+              elementConfig={
+                Object {
+                  "placeholder": "FullName",
+                  "type": "text",
+                }
+              }
+              elementType="input"
+              invalid={true}
+              label="FullName"
+              touched={false}
+              value=""
+            />
+            <InputData
+              changed={[Function]}
+              elementConfig={
+                Object {
+                  "placeholder": "Username",
+                  "type": "text",
+                }
+              }
+              elementType="input"
+              invalid={true}
+              label="UserName"
+              touched={false}
+              value=""
+            />
+            <InputData
+              changed={[Function]}
+              elementConfig={
+                Object {
+                  "placeholder": "Password",
+                  "type": "text",
+                }
+              }
+              elementType="input"
+              invalid={true}
+              label="Password"
+              touched={false}
+              value=""
+            />
+            <InputData
+              changed={[Function]}
+              elementConfig={
+                Object {
+                  "placeholder": "Confirm Password",
+                  "type": "text",
+                }
+              }
+              elementType="input"
+              invalid={true}
+              label="Confirm Password"
+              touched={false}
+              value=""
+            />
+            
+            <ForwardRef(styled.button)
+              onClick={[Function]}
+            >
+              Sign Up
+            </ForwardRef(styled.button)>
+            <ForwardRef(styled.button)
+              onClick={[Function]}
+            >
+              Log in
+            </ForwardRef(styled.button)>
+          </ForwardRef(styled.div)>
+        </ForwardRef(styled.div)>,
+        "style": Object {
+          "textAlign": "center",
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <h2>
+              Sign Up
+            </h2>,
+            <ForwardRef(styled.div)>
+              <InputData
+                changed={[Function]}
+                elementConfig={
+                  Object {
+                    "placeholder": "FullName",
+                    "type": "text",
+                  }
+                }
+                elementType="input"
+                invalid={true}
+                label="FullName"
+                touched={false}
+                value=""
+              />
+              <InputData
+                changed={[Function]}
+                elementConfig={
+                  Object {
+                    "placeholder": "Username",
+                    "type": "text",
+                  }
+                }
+                elementType="input"
+                invalid={true}
+                label="UserName"
+                touched={false}
+                value=""
+              />
+              <InputData
+                changed={[Function]}
+                elementConfig={
+                  Object {
+                    "placeholder": "Password",
+                    "type": "text",
+                  }
+                }
+                elementType="input"
+                invalid={true}
+                label="Password"
+                touched={false}
+                value=""
+              />
+              <InputData
+                changed={[Function]}
+                elementConfig={
+                  Object {
+                    "placeholder": "Confirm Password",
+                    "type": "text",
+                  }
+                }
+                elementType="input"
+                invalid={true}
+                label="Confirm Password"
+                touched={false}
+                value=""
+              />
+              
+              <ForwardRef(styled.button)
+                onClick={[Function]}
+              >
+                Sign Up
+              </ForwardRef(styled.button)>
+              <ForwardRef(styled.button)
+                onClick={[Function]}
+              >
+                Log in
+              </ForwardRef(styled.button)>
+            </ForwardRef(styled.div)>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Sign Up",
+            },
+            "ref": null,
+            "rendered": "Sign Up",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                Array [
+                  <InputData
+                    changed={[Function]}
+                    elementConfig={
+                      Object {
+                        "placeholder": "FullName",
+                        "type": "text",
+                      }
+                    }
+                    elementType="input"
+                    invalid={true}
+                    label="FullName"
+                    touched={false}
+                    value=""
+                  />,
+                  <InputData
+                    changed={[Function]}
+                    elementConfig={
+                      Object {
+                        "placeholder": "Username",
+                        "type": "text",
+                      }
+                    }
+                    elementType="input"
+                    invalid={true}
+                    label="UserName"
+                    touched={false}
+                    value=""
+                  />,
+                  <InputData
+                    changed={[Function]}
+                    elementConfig={
+                      Object {
+                        "placeholder": "Password",
+                        "type": "text",
+                      }
+                    }
+                    elementType="input"
+                    invalid={true}
+                    label="Password"
+                    touched={false}
+                    value=""
+                  />,
+                  <InputData
+                    changed={[Function]}
+                    elementConfig={
+                      Object {
+                        "placeholder": "Confirm Password",
+                        "type": "text",
+                      }
+                    }
+                    elementType="input"
+                    invalid={true}
+                    label="Confirm Password"
+                    touched={false}
+                    value=""
+                  />,
+                ],
+                "",
+                <ForwardRef(styled.button)
+                  onClick={[Function]}
+                >
+                  Sign Up
+                </ForwardRef(styled.button)>,
+                <ForwardRef(styled.button)
+                  onClick={[Function]}
+                >
+                  Log in
+                </ForwardRef(styled.button)>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "FullName",
+                "nodeType": "function",
+                "props": Object {
+                  "changed": [Function],
+                  "elementConfig": Object {
+                    "placeholder": "FullName",
+                    "type": "text",
+                  },
+                  "elementType": "input",
+                  "invalid": true,
+                  "label": "FullName",
+                  "touched": false,
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "UserName",
+                "nodeType": "function",
+                "props": Object {
+                  "changed": [Function],
+                  "elementConfig": Object {
+                    "placeholder": "Username",
+                    "type": "text",
+                  },
+                  "elementType": "input",
+                  "invalid": true,
+                  "label": "UserName",
+                  "touched": false,
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Password",
+                "nodeType": "function",
+                "props": Object {
+                  "changed": [Function],
+                  "elementConfig": Object {
+                    "placeholder": "Password",
+                    "type": "text",
+                  },
+                  "elementType": "input",
+                  "invalid": true,
+                  "label": "Password",
+                  "touched": false,
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "ConfirmPassword",
+                "nodeType": "function",
+                "props": Object {
+                  "changed": [Function],
+                  "elementConfig": Object {
+                    "placeholder": "Confirm Password",
+                    "type": "text",
+                  },
+                  "elementType": "input",
+                  "invalid": true,
+                  "label": "Confirm Password",
+                  "touched": false,
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Sign Up",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Sign Up",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": e {
+                    "baseHash": -1489299407,
+                    "baseStyle": undefined,
+                    "componentId": "sc-eCApGN",
+                    "isStatic": false,
+                    "rules": Array [
+                      "
+  width: 125px;
+  padding: 10px;
+  background-color: #53bbf2;
+  border: none;
+  border-radius: 8px;
+  margin-right: 8px;
+  cursor:pointer;
+  color: ",
+                      [Function],
+                      ";
+  &:focus {
+    border: none;
+    outline: none;
+  }
+",
+                    ],
+                    "staticRulesId": "",
+                  },
+                  "displayName": "styled.button",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "shouldForwardProp": undefined,
+                  "styledComponentId": "sc-eCApGN",
+                  "target": "button",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Log in",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Log in",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": e {
+                    "baseHash": -1489299407,
+                    "baseStyle": undefined,
+                    "componentId": "sc-eCApGN",
+                    "isStatic": false,
+                    "rules": Array [
+                      "
+  width: 125px;
+  padding: 10px;
+  background-color: #53bbf2;
+  border: none;
+  border-radius: 8px;
+  margin-right: 8px;
+  cursor:pointer;
+  color: ",
+                      [Function],
+                      ";
+  &:focus {
+    border: none;
+    outline: none;
+  }
+",
+                    ],
+                    "staticRulesId": "",
+                  },
+                  "displayName": "styled.button",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "shouldForwardProp": undefined,
+                  "styledComponentId": "sc-eCApGN",
+                  "target": "button",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
+              },
+            ],
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": e {
+                "baseHash": 911557895,
+                "baseStyle": undefined,
+                "componentId": "sc-dlnjPT",
+                "isStatic": false,
+                "rules": Array [
+                  "
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 20px #e1e1e1;
+  padding: 20px;
+",
+                ],
+                "staticRulesId": "",
+              },
+              "displayName": "styled.div",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "shouldForwardProp": undefined,
+              "styledComponentId": "sc-dlnjPT",
+              "target": "div",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            },
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": e {
+            "baseHash": -594304118,
+            "baseStyle": undefined,
+            "componentId": "sc-bdnylx",
+            "isStatic": false,
+            "rules": Array [
+              "
+  width: 100%;
+  margin: 0 auto;
+  min-height: 80vh;
+  text-align: center;
+  margin-top: 12%;
+",
+            ],
+            "staticRulesId": "",
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "shouldForwardProp": undefined,
+          "styledComponentId": "sc-bdnylx",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": e {
+          "baseHash": -633946211,
+          "baseStyle": undefined,
+          "componentId": "sc-jSFkmK",
+          "isStatic": false,
+          "rules": Array [
+            "
+  text-align: center;
+  height: 50vh;
+  margin: 16% auto;
+",
+          ],
+          "staticRulesId": "",
+        },
+        "displayName": "styled.div",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "shouldForwardProp": undefined,
+        "styledComponentId": "sc-jSFkmK",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    Symbol(enzyme.__providerValues__): undefined,
+  },
+  Symbol(enzyme.__providerValues__): Map {},
+  Symbol(enzyme.__childContext__): null,
+}
+`;

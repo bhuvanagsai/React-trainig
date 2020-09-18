@@ -34,10 +34,11 @@ class App extends React.Component {
   }
   componentDidMount() {
     this.authListener();
+    sessionStorage.getItem("users");
   }
   authListener() {
     fire.auth().onAuthStateChanged((user) => {
-      if (user) {
+      if (user && sessionStorage.length ===1) {
         this.setState({ user });
       } else {
         this.setState({ user: null });
@@ -53,7 +54,7 @@ class App extends React.Component {
               <Route path="/" exact component={Login} />,
               <Route path="/SignUp" exact component={SignUp} />
               <Route
-                path={["/DashBoard", "/Explore AI", "/ViewCaseStudy"]}
+                path={["/dashBoard", "/explore AI", "/viewCaseStudy"]}
                 exact
                 render={() =>
                   this.state.user ? <Routing /> : <Redirect to="/" />

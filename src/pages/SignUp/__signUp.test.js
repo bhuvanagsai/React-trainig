@@ -11,6 +11,6 @@ configure({ adapter: new Adapter() });
 describe("<SignUp/>", () => {
   it("should render SignUp component", () => {
     const wrapper = shallow(<SignUp />);
-    expect(wrapper);
+    expect(wrapper).toMatchSnapshot();
   });
 });

@@ -86,6 +86,7 @@ class Login extends Component {
   };
   LoginHandler = (e) => {
     if(this.state.loginForm.UserName.value !== "" && this.state.loginForm.Password.value !== ""){
+      sessionStorage.setItem("users",true);
       this.setState({formIsValid : false})
       this.setState({ loading: true });
       e.preventDefault();
@@ -98,10 +99,13 @@ class Login extends Component {
         .then((u) => {
           if (this.state.loading === true) {
             this.setState({ loading: false });
-            setTimeout(() => this.props.history.push("/DashBoard"), 0);
+            setTimeout(() => this.props.history.push("/dashBoard"), 0);
           }
         })
         .catch((err) => {
+          if (this.state.loading === true) {
+            this.setState({ loading: false });
+          }
           this.setState({ invalidUserEntry: true });
         });
       }

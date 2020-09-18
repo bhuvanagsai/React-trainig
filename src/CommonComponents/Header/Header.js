@@ -29,6 +29,7 @@ class Header extends Component {
   logOutHandler = () => {
     let alert = window.confirm("Are you sure you want to Logout?");
     if (alert) {
+      sessionStorage.setItem("users",false);
       fire.auth().signOut();
     }
   };
