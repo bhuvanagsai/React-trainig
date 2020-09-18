@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 
-import { LoginContainer, InputContainer, Button ,ErrorMessage , Container} from "../Login/style";
+import {
+  LoginContainer,
+  InputContainer,
+  Button,
+  ErrorMessage,
+  Container,
+} from "../Login/style";
 
 import Input from "../../CommonComponents/Input/input";
 
@@ -62,12 +68,12 @@ class SignUp extends Component {
         valid: false,
         touched: false,
       },
-      RepeatPassword: {
-        label: "RepeatPassword",
+      ConfirmPassword: {
+        label: "Confirm Password",
         elementType: "input",
         elementConfig: {
           type: "text",
-          placeholder: "RepeatPassword",
+          placeholder: "Confirm Password",
         },
         value: "",
         validation: {
@@ -80,7 +86,7 @@ class SignUp extends Component {
       },
     },
     formIsValid: false,
-    loading:false
+    loading: false,
   };
   inputChangedHandler = (event, InputIdentifier) => {
     const updatedSignUpForm = {
@@ -97,12 +103,19 @@ class SignUp extends Component {
     UpdatedFormElement.touched = true;
     updatedSignUpForm[InputIdentifier] = UpdatedFormElement;
     this.setState({ signUpForm: updatedSignUpForm });
-    this.setState({formIsValid : false})
+    this.setState({ formIsValid: false });
   };
 
   signUp = (e) => {
-    if(this.state.signUpForm.FullName.value !== "" &&this.state.signUpForm.UserName.value !== "" && this.state.signUpForm.Password.value !== "" && this.state.signUpForm.RepeatPassword.value){
-      this.setState({formIsValid : false})
+    if (
+      this.state.signUpForm.FullName.value !== "" &&
+      this.state.signUpForm.UserName.value !== "" &&
+      this.state.signUpForm.Password.value !== "" &&
+      this.state.signUpForm.ConfirmPassword.value !== "" &&
+      this.state.signUpForm.Password.value ===
+        this.state.signUpForm.ConfirmPassword.value
+    ) {
+      this.setState({ formIsValid: false });
       this.setState({ loading: true });
       e.preventDefault();
       fire
@@ -116,9 +129,14 @@ class SignUp extends Component {
             pathname: "/",
           });
         });
-    }
-    else{
-      this.setState({formIsValid : true})
+    } else {
+      if(this.state.signUpForm.Password.value !==
+        this.state.signUpForm.ConfirmPassword.value){
+          this.setState({ passwordValidation: true });
+        }
+        else{
+          this.setState({ formIsValid: true });
+        }
     }
   };
 
@@ -137,7 +155,14 @@ class SignUp extends Component {
     }
     let formValid = "";
     if (this.state.formIsValid) {
-      formValid = <ErrorMessage>Please Enter the valid user details</ErrorMessage>;
+      formValid = (
+        <ErrorMessage>Please Enter the valid user details</ErrorMessage>
+      );
+    }
+    else if(this.state.passwordValidation){
+      formValid = (
+        <ErrorMessage>Incorrect password</ErrorMessage>
+      );
     }
     return (
       <Container style={{ textAlign: "center" }}>
@@ -176,8 +201,7 @@ class SignUp extends Component {
               </Button>
             </InputContainer>
           </LoginContainer>
-        )
-      }
+        )}
       </Container>
     );
   }

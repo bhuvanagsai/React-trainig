@@ -39,6 +39,7 @@ export const Button = styled.button`
   border: none;
   border-radius: 8px;
   margin-right: 8px;
+  cursor:pointer;
   color: ${(props) => props.theme.colors.white};
   &:focus {
     border: none;

@@ -23,6 +23,7 @@ export const BackButton = styled.button`
   color: #fff;
   font-size: 20px;
   font-family: sans-serif;
+  cursor: pointer;
   outline: none;
   a {
     color: inherit;

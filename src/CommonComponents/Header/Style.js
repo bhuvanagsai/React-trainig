@@ -36,6 +36,7 @@ export const LogOutBtn = styled.div`
   opacity: 0.4;
   font-weight: 600;
   font-size: 14px;
+  cursor:pointer;
   &:hover {
     opacity: 1;
   }
